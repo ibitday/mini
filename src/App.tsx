@@ -10,6 +10,7 @@ function App() {
   const initDataState = useSignal(initData.state);
 
 console.log(initDataState)
+console.log(initDataRaw)
 
   backButton.mount()
   useEffect(() => {

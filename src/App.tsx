@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
-import { init, backButton } from '@telegram-apps/sdk-react';
-import { useLaunchParams } from '@telegram-apps/sdk-react';
+import { init, backButton, useLaunchParams, initData, useSignal } from '@telegram-apps/sdk-react';
+
 import './App.css';
 
 function App() {
   init()
   const lp = useLaunchParams()
+  const initDataRaw = useSignal(initData.raw);
+  const initDataState = useSignal(initData.state);
 
-
+console.log(initDataState)
 
   backButton.mount()
   useEffect(() => {

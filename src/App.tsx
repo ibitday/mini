@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   init()
-  
+  backButton.mount()
   useEffect(() => {
     backButton.show();
     return () => {
